@@ -16,5 +16,16 @@ Because the start and stop locations needed by users do not perfectly balance, r
 ![flux_bikes](https://user-images.githubusercontent.com/14931592/203408785-f77def34-d461-45f7-9638-bcd93a2054f4.png)
 
 We can see that over 50% of the bike docks have a net flux of usage close to zero. There are however about 15% of docks having either a large outflow (more bikes leaving than being dropped off) or large inflow (more bikes arriving than being picked up). The usage can be sustained by having enough docks and bikes to maintain demand until rebalancing has occured. I will be looking at te availability of data to test rebalancing optimization and estimate revennue loss due to unavailability of bikes and/or empty docks.
+
+## Using temperature to estimate overall bike usage
+I integrated weather data from Statistics Canada to create a linaer regression model of bike usage based on average daily temperature. This analysis, unsurprisingly, shows a consistent relationship between number of trips taken each day with the temperature. Below you can see the agreement betweent he linear model and the test data.
+
+![Predicting ridership by temperature](https://user-images.githubusercontent.com/14931592/203410636-31ebf35e-419e-4d9a-9b6f-ba5943220e89.png)
+
+Interestingly, when I seperated usage by casual users (people who use pay each time they use a bike) and annual users (people who pay for an annual membership), I found there was no statistical difference between the dependence of the usage on temperature.
+
+![ridership_wether_by_user_group](https://user-images.githubusercontent.com/14931592/203410842-c32bdf65-d167-410b-801e-5ea182e23bb0.png)
+
+
 ## Packages used -- note that if you use anaconda to install, use forge channel or you will need to re-install shapely. It will lead to import issues.
 Geopandas https://geopandas.org/en/stable/
