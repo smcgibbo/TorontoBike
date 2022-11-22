@@ -13,7 +13,7 @@ The most popular start and stop location in the city is York st. and Queen's Qua
 
 Because the start and stop locations needed by users do not perfectly balance, redistribution of the bikes must be done to leave bikes available at docks where people may want to start their trips, and docks empty at locations riders may want to end their trips. This process is called rebalancing and unfortunately this data is not included publically. To get a sense of hte need for rebalancing, I looked at the average flux of each station over the year. This analysis does not include and estimate of the docks being full or empty, and this information is not included in the data.
 
-![flux_bikes](https://user-images.githubusercontent.com/14931592/203408785-f77def34-d461-45f7-9638-bcd93a2054f4.png)
+![image](https://user-images.githubusercontent.com/14931592/203410959-2bc2b479-6c74-4e4f-b26e-1367fbfde277.png)
 
 We can see that over 50% of the bike docks have a net flux of usage close to zero. There are however about 15% of docks having either a large outflow (more bikes leaving than being dropped off) or large inflow (more bikes arriving than being picked up). The usage can be sustained by having enough docks and bikes to maintain demand until rebalancing has occured. I will be looking at te availability of data to test rebalancing optimization and estimate revennue loss due to unavailability of bikes and/or empty docks.
 
